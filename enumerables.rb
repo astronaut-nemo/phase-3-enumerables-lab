@@ -38,18 +38,18 @@ def get_spicy_food_by_cuisine(spicy_foods, cuisine)
   spicy_foods.find{|food| food[:cuisine] == cuisine}
 end
 
-# Given an array of spicy foods, **return an array of hashes** 
+# Given an array of spicy foods, **return an array of hashes** ie using #sort 
 # sorted by heat level from lowest to highest
 def sort_by_heat(spicy_foods)
-  # your code here
+  spicy_foods.sort_by{|food| food[:heat_level]}
 end
 
 # given an array of spicy foods, output to the terminal ONLY 
-# the spicy foods that have a heat level greater than 5, in the following format: 
+# the spicy foods that have a heat level greater than 5, in the following format: ie using #filter/#select
 # Buffalo Wings (American) | Heat Level: 🌶🌶🌶
 # HINT: Try to use methods you've already written to solve this!
 def print_spiciest_foods(spicy_foods)
-  # your code here
+  print_spicy_foods(spiciest_foods(spicy_foods))
 end
 
 # given an array of spicy foods, return an integer representing 
